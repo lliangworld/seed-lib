@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试FFmpeg源码",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/ffmpeg.exe",
+            "args": [
+                "-i", "D:\\videos\\input.mp4",
+                "-c:v", "h264",
+                "D:\\videos\\output.mp4"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:\\msys64\\mingw64\\bin;D:\\ffmpeg-build-debug\\bin;${env:PATH}"
+                }
+            ],
+            "externalConsole": true,
+            "miDebuggerPath": "D:\\msys64\\mingw64\\bin\\gdb.exe",
+            "preLaunchTask": "编译FFmpeg源码",
+            "sourceFileMap": {
+                "/d/ffmpeg-source/**": "${workspaceFolder}/**"
+            }
+        },
+        {
+            "name": "调试FFmpeg测试程序",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:\\msys64\\mingw64\\bin;D:\\ffmpeg-build-debug\\bin;${env:PATH}"
+                }
+            ],
+            "externalConsole": true,
+            "miDebuggerPath": "D:\\msys64\\mingw64\\bin\\gdb.exe",
+            "preLaunchTask": "编译单个测试程序",
+            "sourceFileMap": {
+                "/d/ffmpeg-source/**": "${workspaceFolder}/**"
+            }
+        }
+    ]
+}
