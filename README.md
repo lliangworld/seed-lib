@@ -181,4 +181,4 @@ if (task) {
 
 ## 许可证
 
-[MIT License](LICENSE) © 2026 Liang
+[MIT License](LICENSE) © 2026 lliangworld
